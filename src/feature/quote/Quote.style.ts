@@ -14,6 +14,9 @@ export const QuoteBody = styled.h1`
   margin: 0;
   font-weight: 400;
   font-size: 4rem;
+  @media(max-width: 500px) {
+    font-size: 2rem;
+  }
 `;
 export const QuoteAuthor = styled.p`
   font-family: "Lobster", cursive;
@@ -21,6 +24,9 @@ export const QuoteAuthor = styled.p`
   font-weight: 400;
   font-size: 3.5rem;
   text-align: right;
+  @media(max-width: 500px) {
+    font-size: 1.7rem;
+  }
 `;
 
 export const NextButton = styled.button`
