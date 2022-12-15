@@ -42,7 +42,7 @@ export const NextButton = styled.button`
   font-family: "Lobster", cursive;
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 2.5rem;
   letter-spacing: 0.46px;
   text-transform: uppercase;
   color: #ffffff;

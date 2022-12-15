@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { APIKEY, QUOTEAPIPATH } from "../utils/consts";
+import { APIKEY, QUOTEAPIPATH, RANDOMQUOTE } from "../utils/consts";
 
 interface IQuote {
   quote: string;
@@ -16,8 +16,9 @@ export const quoteApi = createApi({
     },
   }),
   endpoints: (builder) => ({
-    getRandomQuote: builder.query<IQuote[], void>({
-      query: () => "",
+    getRandomQuote: builder.query<IQuote[], string>({
+      query: (category) =>
+        category !== RANDOMQUOTE ? `?category=${category}` : "",
     }),
   }),
 });

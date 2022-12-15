@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useGetRandomQuoteQuery } from "../../services/qoutes";
 import {
   NextButton,
@@ -9,10 +8,13 @@ import {
 } from "./Quote.style";
 import ReactLoading from "react-loading";
 
-export interface IQuoteProps {}
+export interface IQuoteProps {
+  categoryName: string;
+}
 
-export function Quote(props: IQuoteProps) {
-  const { data, isLoading, refetch, isFetching } = useGetRandomQuoteQuery();
+export function Quote({ categoryName }: IQuoteProps) {
+  const { data, isLoading, refetch, isFetching } =
+    useGetRandomQuoteQuery(categoryName);
 
   return (
     <>
