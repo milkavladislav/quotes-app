@@ -25,9 +25,9 @@ export const CustomInput = styled(InputBase)`
     text-transform: lowercase;
     color: #ffffff;
     text-align: center;
-    padding: 17px 0 0 0;
+    padding: 0;
+    line-height: 3.5rem;
     @media (max-width: 500px) {
-      padding: 0;
       font-size: 1.5rem;
       line-height: 2rem;
     }
@@ -38,8 +38,9 @@ export const CustomMenuItem = MStyled(MenuItem)`
     font-family: "Lobster", cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.5rem;
     @media (max-width: 500px) {
       min-height: 0;
+      font-size: 1rem;
     }
 `;
